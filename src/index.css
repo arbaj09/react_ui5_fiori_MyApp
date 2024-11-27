@@ -5,3 +5,7 @@ body {
   background: var(--sapBackgroundColor);
   font-family: var(--sapFontFamily);
 }
+
+* {
+  --sapTile_TitleTextColor: limegreen;
+}
