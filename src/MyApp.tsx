@@ -65,6 +65,9 @@ const handleHeaderClick =()=>{
   }
   
 }
+const contentTitle = ToggleChart === 'lineChart' ? 'Line Chart' : 'Bar Chart';
+const switchToChart = ToggleChart === 'lineChart' ? 'Bar Chart' : 'Line Chart';
+
 
     return(
     
@@ -74,10 +77,12 @@ const handleHeaderClick =()=>{
      header={
      <CardHeader titleText="Card" interactive  onClick={handleHeaderClick}
      avatar={ <Icon name={ ToggleChart === "lineChart" ? lineChartIcon : barChartIcon } /> }
+     subtitleText={`Click here to switch to ${switchToChart}`}
 
-     /> } style={{ width: "300px" }}>
+     /> } 
+     style={{ width: "300px" }}>
       <Text style={spacing.sapUiContentPadding}>
-        This is the content area of the Card
+      {contentTitle}
         </Text>
 
         {ToggleChart ==="lineChart" ? (
